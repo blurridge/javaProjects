@@ -1,6 +1,14 @@
+/* ======================================================
+FILENAME    :calculateGrades.java
+DESCRIPTION :Create a program that asks for 5 grades and
+            displays their average.
+AUTHOR      :Zach Riane I. Machacon
+CREATED     :September 10, 2022
+======================================================= */
+
 import java.util.Scanner;
 
-public class Main {
+public class calculateGrades {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         double firstGrade, secondGrade, thirdGrade, fourthGrade, fifthGrade, average;
