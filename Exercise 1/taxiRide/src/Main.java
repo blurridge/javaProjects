@@ -10,7 +10,7 @@ public class Main {
         totalDistance = input.nextDouble();
         System.out.print("What is your price per kilometer? ");
         pricePerKm = input.nextDouble();
-        totalFare = flagDownRate + (totalDistance * pricePerKm);
+        totalFare = (double) Math.round((flagDownRate + (totalDistance * pricePerKm)) * 100)/100;
         System.out.println("Your total fare is PHP " + totalFare);
     }
 }
