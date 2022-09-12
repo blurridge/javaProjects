@@ -1,6 +1,14 @@
+/* ======================================================
+FILENAME    :calculatePerimeterAndArea.java
+DESCRIPTION :Create a program that asks for a radius and
+            display the perimeter and area of the circle.
+AUTHOR      :Zach Riane I. Machacon
+CREATED     :September 10, 2022
+======================================================= */
+
 import java.util.Scanner;
 
-public class Main {
+public class calculatePerimeterAndArea {
     public static void main(String[] args) {
         double radius, perimeter, area;
         Scanner input = new Scanner(System.in);

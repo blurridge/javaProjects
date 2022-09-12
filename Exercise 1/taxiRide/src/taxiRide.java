@@ -1,6 +1,16 @@
+/* ======================================================
+FILENAME    :taxiRide.java
+DESCRIPTION :Create a program that asks for flag down rate,
+            total distance traveled, and price per
+            kilometer, then display the total fare for
+            the taxi ride.
+AUTHOR      :Zach Riane I. Machacon
+CREATED     :September 10, 2022
+======================================================= */
+
 import java.util.Scanner;
 
-public class Main {
+public class taxiRide {
     public static void main(String[] args) {
         double flagDownRate, totalDistance, pricePerKm, totalFare;
         Scanner input = new Scanner(System.in);
