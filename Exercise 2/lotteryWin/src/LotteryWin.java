@@ -1,5 +1,5 @@
 /* ======================================================
-FILENAME    :lotteryWin.java
+FILENAME    :LotteryWin.java
 DESCRIPTION :Create a program that asks for two-digit
             number and displays the prize according to
             similarity to randomly-generated two-digit
@@ -10,7 +10,7 @@ CREATED     :September 14, 2022
 
 import java.util.Scanner;
 
-public class lotteryWin {
+public class LotteryWin {
     public static void main(String[] args) {
 
         int upperBound = 99, lowerBound = 10, userNum;

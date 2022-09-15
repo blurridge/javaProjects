@@ -1,5 +1,5 @@
 /* ======================================================
-FILENAME    :checkLeapYear.java
+FILENAME    :CheckLeapYear.java
 DESCRIPTION :Create a program that asks for a year and
             displays whether it is a leap year or not.
 AUTHOR      :Zach Riane I. Machacon
@@ -8,7 +8,7 @@ CREATED     :September 14, 2022
 
 import java.util.Scanner;
 
-public class checkLeapYear {
+public class CheckLeapYear {
     public static void main(String[] args) {
 
         int year;

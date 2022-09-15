@@ -1,5 +1,5 @@
 /* ======================================================
-FILENAME    :findChineseZodiac.java
+FILENAME    :FindChineseZodiac.java
 DESCRIPTION :Create a program that asks for a year and
             displays its Chinese Zodiac.
 AUTHOR      :Zach Riane I. Machacon
@@ -8,7 +8,7 @@ CREATED     :September 14, 2022
 
 import java.util.Scanner;
 
-public class findChineseZodiac {
+public class FindChineseZodiac {
     public static void main(String[] args) {
 
         int year, yearModulo;
@@ -22,7 +22,6 @@ public class findChineseZodiac {
             year = userInput.nextInt();
         }
         yearModulo = year % 12;
-        System.out.println(yearModulo);
         switch(yearModulo){
             case 0:
                 zodiacSign = "monkey";
@@ -61,6 +60,6 @@ public class findChineseZodiac {
                 zodiacSign = "sheep";
                 break;
         }
-        System.out.println(year + " has the sign " + zodiacSign);
+        System.out.println(year + " has the sign " + zodiacSign + ".");
     }
 }
