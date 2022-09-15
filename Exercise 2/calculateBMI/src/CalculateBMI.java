@@ -1,5 +1,5 @@
 /* ======================================================
-FILENAME    :calculateBMI.java
+FILENAME    :CalculateBMI.java
 DESCRIPTION :Create a program that computes the user's BMI
 AUTHOR      :Zach Riane I. Machacon
 CREATED     :September 14, 2022
@@ -7,7 +7,7 @@ CREATED     :September 14, 2022
 
 import java.util.Scanner;
 
-public class calculateBMI {
+public class CalculateBMI {
     public static void main(String[] args) {
 
         double userHeight, userWeight, heightMax = 2.10, heightMin = 1.30, weightMin = 40.0, weightMax = 500;

@@ -1,5 +1,5 @@
 /* ======================================================
-FILENAME    :tuitionDouble.java
+FILENAME    :TuitionDouble.java
 DESCRIPTION :Create a program that asks for a university's
             tuition and prints the number of years it takes
             to double the tuition.
@@ -9,7 +9,7 @@ CREATED     :September 14, 2022
 
 import java.util.Scanner;
 
-public class tuitionDouble {
+public class TuitionDouble {
     public static void main(String[] args) {
 
         double uniTuition, doubledTuition;

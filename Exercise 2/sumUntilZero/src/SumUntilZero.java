@@ -1,5 +1,5 @@
 /* ======================================================
-FILENAME    :sumUntilZero.java
+FILENAME    :SumUntilZero.java
 DESCRIPTION :Create a program that continously asks a
             number from a user and adds those values
             together until user enters zero.
@@ -9,7 +9,7 @@ CREATED     :September 14, 2022
 
 import java.util.Scanner;
 
-public class sumUntilZero {
+public class SumUntilZero {
     public static void main(String[] args) {
 
         int userNum = -1, sum = 0;

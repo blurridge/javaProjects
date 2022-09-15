@@ -1,5 +1,5 @@
 /* ======================================================
-FILENAME    :numberGuessing.java
+FILENAME    :NumberGuessing.java
 DESCRIPTION :Create a program that continuously asks the
             user for an number until it matches the
             randomly generated number and informs the user
@@ -10,13 +10,13 @@ CREATED     :September 14, 2022
 
 import java.util.Scanner;
 
-public class numberGuessing {
+public class NumberGuessing {
     public static void main(String[] args) {
 
         int userGuess, randomNum = (int) (Math.random() * 100);
         Scanner userInput = new Scanner(System.in);
 
-        System.out.print("Enter your guess: " + randomNum);
+        System.out.print("Enter your guess: ");
         userGuess = userInput.nextInt();
         while(userGuess != randomNum){
             if(userGuess < randomNum)

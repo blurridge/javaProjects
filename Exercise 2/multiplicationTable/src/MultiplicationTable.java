@@ -1,12 +1,12 @@
 /* ======================================================
-FILENAME    :multiplicationTable.java
+FILENAME    :MultiplicationTable.java
 DESCRIPTION :Create a program that displays a 20x20
             multiplication table.
 AUTHOR      :Zach Riane I. Machacon
 CREATED     :September 14, 2022
 ======================================================= */
 
-public class multiplicationTable {
+public class MultiplicationTable {
     public static void main(String[] args) {
 
         for(int i = 0; i <= 20; i++){
