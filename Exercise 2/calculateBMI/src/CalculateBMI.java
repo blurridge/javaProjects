@@ -12,6 +12,7 @@ public class CalculateBMI {
 
         double userHeight, userWeight, heightMax = 2.10, heightMin = 1.30, weightMin = 40.0, weightMax = 500;
         double userBMI;
+        String userInterpretation;
         // Max and min values are based on Filipino extremes.
         Scanner userInput = new Scanner(System.in);
         System.out.print("Enter your height in meters: ");
@@ -33,6 +34,8 @@ public class CalculateBMI {
         }
 
         userBMI = Math.round((userWeight / Math.pow(userHeight, 2)) * 10.0) / 10.0;
-        System.out.println("Your BMI is: " + userBMI + ".");
+        userInterpretation = (userBMI < 18.5) ? "Underweight" : (userBMI < 25.0) ? "Normal" : (userBMI < 30.0) ?
+                "Overweight" : "Obese";
+        System.out.println("Your BMI interpretation is: " + userInterpretation + " (" + userBMI + ").");
     }
 }
