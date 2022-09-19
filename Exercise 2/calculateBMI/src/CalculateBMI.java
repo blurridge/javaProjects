@@ -36,6 +36,6 @@ public class CalculateBMI {
         userBMI = Math.round((userWeight / Math.pow(userHeight, 2)) * 10.0) / 10.0;
         userInterpretation = (userBMI < 18.5) ? "Underweight" : (userBMI < 25.0) ? "Normal" : (userBMI < 30.0) ?
                 "Overweight" : "Obese";
-        System.out.println("Your BMI interpretation is: " + userInterpretation + " (" + userBMI + ").");
+        System.out.printf("Your BMI interpretation is: %s (%.2f)", userInterpretation, userBMI);
     }
 }
