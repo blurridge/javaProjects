@@ -34,14 +34,14 @@ public class LotteryWin {
 
         if(userNum == randomNum){
             userWinnings = 10000.00;
-            System.out.println("You have won PHP " + userWinnings);
+            System.out.printf("You have won PHP %.2f", userWinnings);
         } else if(userFirstDigit == randomSecondDigit && userSecondDigit == randomFirstDigit){
             userWinnings = 3000.00;
-            System.out.println("You have won PHP " + userWinnings);
+            System.out.printf("You have won PHP %.2f", userWinnings);
         } else if(userFirstDigit == randomFirstDigit || userSecondDigit == randomSecondDigit ||
                 userFirstDigit == randomSecondDigit || userSecondDigit == randomFirstDigit){
             userWinnings = 1000.00;
-            System.out.println("You have won PHP " + userWinnings);
+            System.out.printf("You have won PHP %.2f", userWinnings);
         } else{
             System.out.println("You have lost.");
         }
