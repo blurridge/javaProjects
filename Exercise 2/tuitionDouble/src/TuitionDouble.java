@@ -17,11 +17,15 @@ public class TuitionDouble {
         Scanner userInput = new Scanner(System.in);
         System.out.print("Enter the university's tuition: PHP ");
         uniTuition = userInput.nextDouble();
+        while(uniTuition < 0){
+            System.out.println("Invalid tuition amount. Please try again.");
+            System.out.print("Enter the university's tuition: PHP ");
+            uniTuition = userInput.nextDouble();
+        }
         System.out.print("Enter the university's tuition increase rate: ");
         percentage = userInput.nextDouble();
         tuitionIncrease = 1.0 + (percentage / 100.0);
         doubledTuition = uniTuition * 2;
-        System.out.print(tuitionIncrease);
         while(uniTuition < doubledTuition){
             year++;
             uniTuition *= tuitionIncrease;
