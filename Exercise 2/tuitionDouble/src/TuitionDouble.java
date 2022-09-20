@@ -12,15 +12,19 @@ import java.util.Scanner;
 public class TuitionDouble {
     public static void main(String[] args) {
 
-        double uniTuition, doubledTuition;
+        double uniTuition, percentage, doubledTuition, tuitionIncrease;
         int year = 0;
         Scanner userInput = new Scanner(System.in);
         System.out.print("Enter the university's tuition: PHP ");
         uniTuition = userInput.nextDouble();
+        System.out.print("Enter the university's tuition increase rate: ");
+        percentage = userInput.nextDouble();
+        tuitionIncrease = 1.0 + (percentage / 100.0);
         doubledTuition = uniTuition * 2;
+        System.out.print(tuitionIncrease);
         while(uniTuition < doubledTuition){
             year++;
-            uniTuition *= 1.70;
+            uniTuition *= tuitionIncrease;
         }
         System.out.println("The tuition will double after " + year + " year/s.");
     }
