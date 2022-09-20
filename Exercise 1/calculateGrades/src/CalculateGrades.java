@@ -1,5 +1,5 @@
 /* ======================================================
-FILENAME    :calculateGrades.java
+FILENAME    :CalculateGrades.java
 DESCRIPTION :Create a program that asks for 5 grades and
             displays their average.
 AUTHOR      :Zach Riane I. Machacon
@@ -8,7 +8,7 @@ CREATED     :September 10, 2022
 
 import java.util.Scanner;
 
-public class calculateGrades {
+public class CalculateGrades {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         double grade, sum = 0, average;
@@ -19,6 +19,6 @@ public class calculateGrades {
             sum += grade;
         }
         average = sum / 5.0;
-        System.out.println("Your average is: " + average);
+        System.out.printf("Your average is: %.2f", average);
     }
 }
