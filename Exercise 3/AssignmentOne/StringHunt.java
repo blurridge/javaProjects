@@ -24,6 +24,7 @@ public class StringHunt {
             boolean doesWordExist = Arrays.asList(strArr).contains(word);
             if(word.equals("stop")) {
                 continueWordCheck = false;
+                break;
             }
             if(doesWordExist) {
                 System.out.println(word + " exists in the sentence.");
