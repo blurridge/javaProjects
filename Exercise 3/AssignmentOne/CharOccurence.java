@@ -11,12 +11,11 @@ import java.util.Scanner;
 public class CharOccurence {
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
-        String userSentence, noDupe;
+        String userSentence;
         System.out.print("Enter a sentence: ");
         userSentence = userInput.nextLine();
         int[] numOccurences = countOccurences(userSentence);
         int[] hashUsedChars = new int[127];
-        // TODO: Check if exclamation point is not included and if letters with different cases should be counted the same
         for(int i = 0; i < userSentence.length(); i++){
             if(!Character.isWhitespace(userSentence.charAt(i)) && hashUsedChars[(int) userSentence.charAt(i)] == 0){
                 hashUsedChars[(int) userSentence.charAt(i)]++;
