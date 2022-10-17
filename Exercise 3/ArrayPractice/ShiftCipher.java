@@ -7,20 +7,24 @@ public class ShiftCipher {
         Scanner userInput = new Scanner(System.in);
         boolean continueCipher = true;
         while(continueCipher) {
-            System.out.print("Enter \"decode\" or \"encode\": ")
+            System.out.print("Enter \"decode\" or \"encode\": ");
             String modeChoice = userInput.nextLine();
             System.out.print("Enter your word: ");
             String baseWord = userInput.nextLine();
             System.out.print("Enter the shift factor: ");
             int shiftFactor = userInput.nextInt();
-            if(modeChoice.equals("decode"))
+            if(modeChoice.equals("decode")){
                 String wordResult = decodeWord(baseWord, shiftFactor);
                 System.out.println("Base word: " + baseWord + "\nShifted word: " + wordResult);
-            else if(modeChoice.equals("encode"))
+            }
+            else if(modeChoice.equals("encode")){
                 String wordResult = encodeWord(baseWord, shiftFactor);
                 System.out.println("Base word: " + baseWord + "\nShifted word: " + wordResult);
-            else
+            }
+            else{
                 System.out.println("Invalid mode. Please try again.");
+            }
+            userInput.nextLine();
         }
         userInput.close();
     }
