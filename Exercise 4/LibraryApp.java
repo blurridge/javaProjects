@@ -272,6 +272,18 @@ public class LibraryApp {
     }
 
     private static void borrowBook() {
+        System.out.println("List of books: ");
+        for(int i = 0; i < bookCount; i++){
+            System.out.println(books[i]);
+        }
+        System.out.println();
+
+        System.out.println("List of users: ");
+        for(int i = 0; i < userCount; i++){
+            System.out.println(users[i]);
+        }
+        System.out.println();
+ 
         Scanner userInput = new Scanner(System.in);
         System.out.print("Enter borrower name: ");
         String borrowerName = userInput.nextLine();
@@ -285,14 +297,20 @@ public class LibraryApp {
         if(userExists){
             System.out.print("Enter book title to be borrowed: ");
             String bookTitle = userInput.nextLine();
-            boolean bookExists = false;
+            boolean bookExists = false, bookBorrowed = false;
             for(int i = 0; i < bookCount; i++){
                 if(bookTitle.equalsIgnoreCase(books[i].getBookTitle())){
                     bookExists = true;
                     break;
                 }
             }
-            if(bookExists){
+            for(int i = 0; i < recordCount; i++){
+                if(bookTitle.equalsIgnoreCase(borrowRecords[i].getBookTitle())){
+                    bookBorrowed = true;
+                    break;
+                }
+            }
+            if(bookExists && !bookBorrowed){
                 BorrowRecord currentBorrower = new BorrowRecord(borrowerName, bookTitle);
                 if(recordCount + 1 >= borrowRecords.length){
                     System.out.println("[ERROR] Records are full!\n");
@@ -303,7 +321,7 @@ public class LibraryApp {
                 }
             }
             else{
-                System.out.println("[ERROR] Book entered does not exist.\n");
+                System.out.println("[ERROR] Book entered does not exist or book is currently borrowed.\n");
             }
         }
         else{
