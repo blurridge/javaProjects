@@ -8,7 +8,6 @@ import java.util.Scanner;
 public class LibrarianApp {
     
     private static int arrSize = 100;
-    private static Librarian[] librarians = new Librarian[arrSize];
     private static ReadingMaterial[] readingMats = new ReadingMaterial[arrSize];
     private static int libCount = 0;
     private static int bookCount = 0;
@@ -18,46 +17,36 @@ public class LibrarianApp {
     private static int matCount;
     private static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
-        loadValidLibrarians();
         loadReadingMats();
-        boolean validUser = isLoggedIn();
-        clearScreen();
-        if(validUser) {
-            boolean continueProgram = true;
-            while(continueProgram) {
-                updateMatCount();
-                int choice = showMenu();
-                switch(choice) {
-                    case 1:
-                        clearScreen();
-                        addReadingMats();
-                        clearScreen();
-                        break;
-                    case 2:
-                        clearScreen();
-                        removeReadingMats();
-                        clearScreen();
-                        break;
-                    case 3:
-                        clearScreen();
-                        displayReadingMats();
-                        promptEnterKey();
-                        clearScreen();
-                        break;
-                    case 4:
-                        continueProgram = false;
-                        break;
-                    default:
-                        clearScreen();
-                        System.out.println("Invalid choice! Please try again.\n\n");
-                        break;
-                }
+        boolean continueProgram = true;
+        while(continueProgram) {
+            updateMatCount();
+            int choice = showMenu();
+            switch(choice) {
+                case 1:
+                    clearScreen();
+                    addReadingMats();
+                    clearScreen();
+                    break;
+                case 2:
+                    clearScreen();
+                    removeReadingMats();
+                    clearScreen();
+                    break;
+                case 3:
+                    clearScreen();
+                    displayReadingMats();
+                    promptEnterKey();
+                    clearScreen();
+                    break;
+                case 4:
+                    continueProgram = false;
+                    break;
+                default:
+                    clearScreen();
+                    System.out.println("Invalid choice! Please try again.\n\n");
+                    break;
             }
-        }
-
-        else {
-            System.out.println("Invalid user! Closing the program...");
-            System.exit(0);
         }
     }
 
@@ -93,40 +82,6 @@ public class LibrarianApp {
         }
         System.out.println("\n\n");
         return choice;
-    }
-
-    public static boolean isLoggedIn() {
-        String idNumber, password;
-        System.out.print("Enter your ID Number: ");
-        idNumber = input.nextLine();
-        System.out.print("Enter your password: ");
-        password = input.nextLine();
-        for(int i = 0; i < libCount; i++) {
-            String currId = librarians[i].getIdNumber();
-            String currPassword = librarians[i].getPassword();
-            if(idNumber.equals(currId) && password.equals(currPassword)){
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public static void loadValidLibrarians() {
-        File librarianFile = new File("../data/librarian.txt");
-        Scanner fileReader;
-        try {
-            fileReader = new Scanner(librarianFile);
-        }
-        catch(FileNotFoundException e) {
-            System.out.println(e.getMessage());
-            return;
-        }
-        while(fileReader.hasNext()) {
-            String[] libDetails = fileReader.nextLine().split(";");
-            Librarian currLib = new Librarian(libDetails[0], libDetails[1], libDetails[2], Long.parseLong(libDetails[3]));
-            librarians[libCount++] = currLib;
-        }
-        fileReader.close();
     }
 
     public static void loadReadingMats() {
