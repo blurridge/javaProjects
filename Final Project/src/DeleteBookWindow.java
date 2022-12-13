@@ -16,6 +16,8 @@ public class DeleteBookWindow {
                     int currentIdx = Integer.parseInt(index.getText()) - 1;
                     if(currentIdx >= 0 && currentIdx < LibrarianApp.matCount) {
                         this.toDelete = currentIdx;
+                        JOptionPane.showMessageDialog(null, LibrarianApp.readingMats[currentIdx].getTitle() + " has been deleted successfully!", 
+                        "[SUCCESS] Book Deleted Successfully", JOptionPane.INFORMATION_MESSAGE);
                     }
                     else {
                         JOptionPane.showMessageDialog(null, "Please enter a valid index.", "[ERROR] Invalid Index", JOptionPane.ERROR_MESSAGE);

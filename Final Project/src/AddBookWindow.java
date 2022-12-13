@@ -21,6 +21,9 @@ public class AddBookWindow {
                 if(this.title.equals("") || this.author.equals("")) {
                     JOptionPane.showMessageDialog(null, "Please enter valid book details.", "[ERROR] Invalid Book Data", JOptionPane.ERROR_MESSAGE);
                 }
+                else {
+                    JOptionPane.showMessageDialog(null, this.title + " has been added successfully!", "[SUCCESS] Book Added Successfully", JOptionPane.INFORMATION_MESSAGE);
+                }
             }
             else {
                 break;
