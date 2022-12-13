@@ -82,9 +82,7 @@ public class MainWindow implements ActionListener {
         tablePanel.setBounds(136, 73, 764, 477);
         tablePanel.setLayout(null);
         
-        temp = logo; 
-        temp.setImage(temp.getImage().getScaledInstance(79, 79, Image.SCALE_DEFAULT));
-        libraryLogo = new JLabel(temp);
+        libraryLogo = new JLabel(logo);
         libraryLogo.setBounds(29, 2, 79, 79);
         
         homeBtn = new JButton();
