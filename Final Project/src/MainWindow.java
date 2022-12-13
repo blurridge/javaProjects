@@ -93,7 +93,7 @@ public class MainWindow implements ActionListener {
         homeBtn.setContentAreaFilled(false);
         homeBtn.setBorderPainted(false);
         homeBtn.setFocusPainted(false);
-        homeBtn.setBounds(25, 102, 80, 15);
+        homeBtn.setBounds(15, 102, 100, 15);
         homeBtn.addActionListener(this);
         homeBtn.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
@@ -105,7 +105,7 @@ public class MainWindow implements ActionListener {
         addBtn.setContentAreaFilled(false);
         addBtn.setBorderPainted(false);
         addBtn.setFocusPainted(false);
-        addBtn.setBounds(15, 154, 105, 15);
+        addBtn.setBounds(10, 154, 120, 15);
         addBtn.addActionListener(this);
         addBtn.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
@@ -117,7 +117,7 @@ public class MainWindow implements ActionListener {
         deleteBtn.setContentAreaFilled(false);
         deleteBtn.setBorderPainted(false);
         deleteBtn.setFocusPainted(false);
-        deleteBtn.setBounds(1, 206, 130, 15);
+        deleteBtn.setBounds(1, 206, 140, 15);
         deleteBtn.addActionListener(this);
         deleteBtn.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
@@ -129,7 +129,7 @@ public class MainWindow implements ActionListener {
         forceSaveBtn.setContentAreaFilled(false);
         forceSaveBtn.setBorderPainted(false);
         forceSaveBtn.setFocusPainted(false);
-        forceSaveBtn.setBounds(10, 300, 115, 15);
+        forceSaveBtn.setBounds(0, 300, 135, 15);
         forceSaveBtn.addActionListener(this);
         forceSaveBtn.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
@@ -141,7 +141,7 @@ public class MainWindow implements ActionListener {
         forceLoadBtn.setContentAreaFilled(false);
         forceLoadBtn.setBorderPainted(false);
         forceLoadBtn.setFocusPainted(false);
-        forceLoadBtn.setBounds(10, 350, 115, 15);
+        forceLoadBtn.setBounds(0, 350, 135, 15);
         forceLoadBtn.addActionListener(this);
         forceLoadBtn.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
@@ -153,7 +153,7 @@ public class MainWindow implements ActionListener {
         quitBtn.setContentAreaFilled(false);
         quitBtn.setBorderPainted(false);
         quitBtn.setFocusPainted(false);
-        quitBtn.setBounds(10, 400, 115, 15);
+        quitBtn.setBounds(5, 400, 115, 15);
         quitBtn.addActionListener(this);
         quitBtn.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
